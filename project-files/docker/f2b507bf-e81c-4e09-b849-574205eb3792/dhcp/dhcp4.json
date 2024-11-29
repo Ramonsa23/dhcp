@@ -1,0 +1,101 @@
+{
+    "Dhcp4": {
+        "loggers": [
+            {
+                "name": "kea-dhcp4",
+                "severity": "DEBUG",
+                "debuglevel": 0,
+                "output_options": [
+                    {
+                        "output": "/var/log/dhcp.log"
+                    }
+                ]
+            }
+        ],
+        "interfaces-config": {
+            "interfaces": [
+                "eth0"
+            ],
+            "dhcp-socket-type": "raw"
+        },
+        "valid-lifetime": 4000,
+        "renew-timer": 1000,
+        "rebind-timer": 2000,
+        "subnet4": [
+            {
+                "pools": [
+                    {
+                        "pool": "192.168.10.30-192.168.10.32"
+                    },
+                    {
+                        "pool": "192.168.10.101-192.168.10.230"
+                    }
+                ],
+                "subnet": "192.168.10.0/24",
+                "id": 1,
+                "reservations": [
+                    {
+                        "hw-address": "02:5a:e5:80:f4:24",
+                        "ip-address": "192.168.10.227"
+                    }
+                ],
+                "option-data": [
+                    {
+                        "name": "domain-name-servers",
+                        "data": "192.168.10.10",
+                        "always-send": true
+                    },
+                    {
+                        "name": "routers",
+                        "data": "192.168.10.254",
+                        "always-send": true
+                    }
+                ]
+            },
+            {
+                "pools": [
+                    {
+                        "pool": "192.168.11.50-192.168.11.150"
+                    }
+                ],
+                "subnet": "192.168.11.0/24",
+                "id": 2,
+                "option-data": [
+                    {
+                        "name": "domain-name-servers",
+                        "data": "192.168.10.10",
+                        "always-send": true
+                    },
+                    {
+                        "name": "routers",
+                        "data": "192.168.11.254",
+                        "always-send": true
+                    }
+                ]
+            },
+            {
+                "pools": [
+                    {
+                        "pool": "192.168.57.50-192.168.57.150"
+                    }
+                ],
+                "subnet": "192.168.57.0/24",
+                "id": 3,
+                "option-data": [
+                    {
+                        "name": "domain-name-servers",
+                        "data": "192.168.10.10",
+                        "always-send": true
+                    },
+                    {
+                        "name": "routers",
+                        "data": "192.168.57.254",
+                        "always-send": true
+                    }
+                ]
+            }
+        ]
+        
+    
+    }
+}

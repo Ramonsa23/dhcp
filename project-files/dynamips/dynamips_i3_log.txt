@@ -1,0 +1,9 @@
+Nov 29 08:47:08.318 HYPERVISOR: Release 0.2.14-amd64/Linux (tag 2014092320)
+Nov 29 08:47:08.318 HYPERVISOR: Started on IP = localhost, TCP port = 54655.
+Nov 29 08:47:08.327 HYPERVISOR: exec_cmd: hypervisor version 
+Nov 29 08:47:08.327 HYPERVISOR: exec_cmd: hypervisor working_dir /home/sanclemente.local/a23ramonsa/GNS3/projects/DHCP-debian/project-files/dynamips 
+Nov 29 08:47:08.327 GENERAL: working_dir=/home/sanclemente.local/a23ramonsa/GNS3/projects/DHCP-debian/project-files/dynamips
+Nov 29 08:47:08.327 HYPERVISOR: exec_cmd: ethsw create .57 
+Nov 29 08:47:08.686 HYPERVISOR: exec_cmd: nio create_udp udp-1ddac153-44dd-46bb-bbfd-549208234017 10017 127.0.0.1 10016 
+Nov 29 08:47:08.687 HYPERVISOR: exec_cmd: ethsw add_nio .57 udp-1ddac153-44dd-46bb-bbfd-549208234017 
+Nov 29 08:47:08.699 HYPERVISOR: exec_cmd: ethsw set_access_port .57 udp-1ddac153-44dd-46bb-bbfd-549208234017 1 

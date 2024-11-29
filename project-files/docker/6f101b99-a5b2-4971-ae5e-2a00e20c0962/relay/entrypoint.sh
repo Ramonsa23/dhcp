@@ -1,0 +1,1 @@
+cp /relay/relay.conf /etc/default/isc-dhcp-relay

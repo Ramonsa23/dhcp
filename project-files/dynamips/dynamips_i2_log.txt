@@ -1,0 +1,15 @@
+Nov 29 08:47:08.257 HYPERVISOR: Release 0.2.14-amd64/Linux (tag 2014092320)
+Nov 29 08:47:08.257 HYPERVISOR: Started on IP = localhost, TCP port = 52751.
+Nov 29 08:47:08.267 HYPERVISOR: exec_cmd: hypervisor version 
+Nov 29 08:47:08.267 HYPERVISOR: exec_cmd: hypervisor working_dir /home/sanclemente.local/a23ramonsa/GNS3/projects/DHCP-debian/project-files/dynamips 
+Nov 29 08:47:08.267 GENERAL: working_dir=/home/sanclemente.local/a23ramonsa/GNS3/projects/DHCP-debian/project-files/dynamips
+Nov 29 08:47:08.267 HYPERVISOR: exec_cmd: ethsw create .11 
+Nov 29 08:47:08.496 HYPERVISOR: exec_cmd: nio create_udp udp-82db9caf-28ba-420c-b304-6cbaed860cb0 10007 127.0.0.1 10006 
+Nov 29 08:47:08.496 HYPERVISOR: exec_cmd: ethsw add_nio .11 udp-82db9caf-28ba-420c-b304-6cbaed860cb0 
+Nov 29 08:47:08.498 HYPERVISOR: exec_cmd: ethsw set_access_port .11 udp-82db9caf-28ba-420c-b304-6cbaed860cb0 1 
+Nov 29 08:47:08.524 HYPERVISOR: exec_cmd: nio create_udp udp-bc465c5d-de14-463d-a89b-afedf5c7d3fd 10009 127.0.0.1 10008 
+Nov 29 08:47:08.525 HYPERVISOR: exec_cmd: ethsw add_nio .11 udp-bc465c5d-de14-463d-a89b-afedf5c7d3fd 
+Nov 29 08:47:08.538 HYPERVISOR: exec_cmd: ethsw set_access_port .11 udp-bc465c5d-de14-463d-a89b-afedf5c7d3fd 1 
+Nov 29 08:47:08.639 HYPERVISOR: exec_cmd: nio create_udp udp-33b925aa-f3e9-4cae-b6fe-b2b9556d4c5c 10015 127.0.0.1 10014 
+Nov 29 08:47:08.639 HYPERVISOR: exec_cmd: ethsw add_nio .11 udp-33b925aa-f3e9-4cae-b6fe-b2b9556d4c5c 
+Nov 29 08:47:08.659 HYPERVISOR: exec_cmd: ethsw set_access_port .11 udp-33b925aa-f3e9-4cae-b6fe-b2b9556d4c5c 1 
