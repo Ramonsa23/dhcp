@@ -67,6 +67,14 @@ IMPORTANTE: Los archivos db.loquesea deben tener permisos de bind.
 Por eso, en el entrypoint debemos darle permisos:
 ![permisos_db_dns](image-11.png)
 
+Añadimos la configuracion ddnsdhcp en el dhcp, y añadimos la tsig keys. En ddns-domains añadimos los dominios, con su llave y su servidor dns.
+![ddns_dhcp_config](image-15.png)
+
+Por defecto, no se permite actualizaciones, por lo que debemos añadir en dhcp4.json dhcp-ddns{ "enable-updates":true},
+
+Además,en cada subnet, ponemos: ![sufijo_dns_paradhcp](image-16.png)
+
+Al finalizar configuraciones, arrancamos el servicio. kea-dhcp-ddns -d -c /etc/kea/kea-dhcp-ddns.conf
 
 
 ## 7.- Establece os nomes de dominio e servidores DNS  de cada zona.##
@@ -101,6 +109,8 @@ Configuración network router:
 ![router_que_sale_al_Exterior](image-14.png)
 
 Para arrancar el relay en el router
-dhcrelay -d -i eth2 -i eth3 -i eth1 192.168.10.8 (o algo así, revisarlo)
+dhcrelay -d -i eth2 -i eth3 -i eth1 192.168.10.8
 
 rsyslogd y despues reiniciamos proceso y hacemos /var/log/syslog para ver lo que ocurre en el pc.
+
+rndc sync -clean para despues de un update, en /var/cache/bind/db.stark.lan se actualice
